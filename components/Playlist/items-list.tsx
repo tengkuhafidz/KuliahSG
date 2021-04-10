@@ -1,8 +1,8 @@
-import {Item} from '../../utils/constants'
+import {PlaylistItem} from '../../utils/constants'
 import SingleItem from './single-item'
 
 interface Props {
-	items: Item[]
+	items: PlaylistItem[]
 }
 
 export default function ItemsList({items}: Props) {

@@ -1,6 +1,6 @@
-# Websheets - Boilerplate
+# Kuliah.SG v3
 
-This is a boilerplate for [Websheets](https://websheets.co) template creation
+Version 3 of Kuliah.SG - powered by Websheets
 
 **Tech Stack:**
 

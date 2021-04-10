@@ -1,40 +1,65 @@
-import {defaultSiteData, Item, SiteData} from '../utils/constants'
+import {
+	defaultPageData,
+	PlaylistItem,
+	PageData,
+	QuoteItem,
+} from '../utils/constants'
 
 const stringToBoolean = (field: string) => field === 'TRUE'
 const stringToArray = (field: string) => field?.split(',')
-const toLowercase = (field: string) => field?.toLowerCase()
+const defaultToNull = (value: string) => (value ? value : null)
 
-export const transformItemsData = (itemValues: any[]): Item[] => {
+export const transformPlaylistItemsData = (
+	itemValues: any[],
+): PlaylistItem[] => {
 	return itemValues.map((itemValue, index) => ({
 		id: index,
 		title: itemValue[0],
-		tags: stringToArray(itemValue[1]),
-		imageUrl: itemValue[2],
-		destinationUrl: itemValue[3],
+		playlistUrl: itemValue[1],
+		language: itemValue[2],
+		tags: stringToArray(itemValue[3]),
 		isActive: stringToBoolean(itemValue[4]),
+		playlistId: '',
+		playlistThumbnail: '',
 	}))
 }
 
-export const transformSiteData = (siteDataValue: any[]): SiteData => ({
-	// GENERAL
-	logoUrl: siteDataValue[1] || defaultSiteData.logoUrl,
-	themeColor: toLowercase(siteDataValue[2]) || defaultSiteData.themeColor,
-	darkMode: stringToBoolean(siteDataValue[3]),
+export const transformQuoteItemsData = (itemValues: any[]): QuoteItem[] => {
+	return itemValues.map((itemValue, index) => ({
+		id: index,
+		message: itemValue[0],
+		sourceTitle: itemValue[1],
+		sourceUrl: itemValue[2],
+		timestamp: itemValue[3],
+		contributorName: itemValue[4],
+		contributorUrl: itemValue[5],
+		language: itemValue[6],
+		tags: stringToArray(itemValue[7]),
+		isActive: stringToBoolean(itemValue[8]),
+	}))
+}
+
+export const transformPageData = (pageDataValue: any[]): PageData => ({
 	// NAVBAR
-	navButtonText: siteDataValue[5],
-	navButtonUrl: siteDataValue[6],
-	navMenuText: siteDataValue[7],
-	navMenuUrl: siteDataValue[8],
-	//HERO
-	heroTitle: siteDataValue[10],
-	heroDescription: siteDataValue[11],
+	logoUrl: pageDataValue[1] || defaultPageData.logoUrl,
+	navButtonText: defaultToNull(pageDataValue[2]),
+	navButtonUrl: defaultToNull(pageDataValue[3]),
+	// HERO
+	heroTitle: defaultToNull(pageDataValue[5]),
+	heroDescription: defaultToNull(pageDataValue[6]),
+	primaryButtonText: defaultToNull(pageDataValue[7]),
+	primaryButtonUrl: defaultToNull(pageDataValue[8]),
+	secondaryButtonText: defaultToNull(pageDataValue[9]),
+	secondaryButtonUrl: defaultToNull(pageDataValue[10]),
 	//FOOTER
-	copyrightText: siteDataValue[13],
-	footerText: siteDataValue[14],
-	footerLinkableText: siteDataValue[15],
-	footerLinkableUrl: siteDataValue[16],
+	footerText: defaultToNull(pageDataValue[12]),
+	footerLinkableText: defaultToNull(pageDataValue[13]),
+	footerLinkableUrl: defaultToNull(pageDataValue[14]),
 	//SEO
-	seoTitle: siteDataValue[18] || defaultSiteData.seoTitle,
-	seoDescription: siteDataValue[19] || defaultSiteData.seoDescription,
-	seoBannerUrl: siteDataValue[20] || defaultSiteData.seoBannerUrl,
+	seoTitle: pageDataValue[16] || defaultPageData.seoTitle,
+	seoDescription: pageDataValue[17] || defaultPageData.seoDescription,
+	seoBannerUrl: pageDataValue[18] || defaultPageData.seoBannerUrl,
+	//ANNOUNCEMENT BAR
+	announcementMessage: defaultToNull(pageDataValue[20]),
+	announcementDestinationUrl: defaultToNull(pageDataValue[21]),
 })

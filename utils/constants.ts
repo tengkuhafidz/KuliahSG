@@ -1,27 +1,39 @@
-export interface Item {
+export interface PlaylistItem {
 	id: number
 	title: string
+	playlistUrl: string
+	language: string
 	tags: string[]
-	imageUrl: string
-	destinationUrl: string
+	isActive: boolean
+	playlistId: string
+	playlistThumbnail: string
+}
+
+export interface QuoteItem {
+	id: number
+	message: string
+	sourceTitle: string
+	sourceUrl: string
+	contributorName: string
+	contributorUrl: string
+	language: string
+	tags: string[]
 	isActive: boolean
 }
 
-export interface SiteData {
-	// GENERAL
-	logoUrl: string
-	themeColor: string
-	darkMode: boolean
+export interface PageData {
 	// NAVBAR
+	logoUrl: string
 	navButtonText: string
 	navButtonUrl: string
-	navMenuText: string
-	navMenuUrl: string
-	//HERO
+	// HERO
 	heroTitle: string
 	heroDescription: string
+	primaryButtonText: string
+	primaryButtonUrl: string
+	secondaryButtonText: string
+	secondaryButtonUrl: string
 	//FOOTER
-	copyrightText: string
 	footerText: string
 	footerLinkableText: string
 	footerLinkableUrl: string
@@ -29,30 +41,37 @@ export interface SiteData {
 	seoTitle: string
 	seoDescription: string
 	seoBannerUrl: string
+	//ANNOUNCEMENT BAR
+	announcementMessage: string
+	announcementDestinationUrl: string
 }
 
-export const defaultSiteData: SiteData = {
-	// GENERAL
-	logoUrl: "/images/logo.png",
-	themeColor: "green",
-	darkMode: false,
+export const defaultPageData: PageData = {
 	// NAVBAR
-	navButtonText: "Treat The Dev",
-	navButtonUrl: "https://buymeacoffee.com/sohafidz",
-	navMenuText: "Documentation",
-	navMenuUrl: "https://docs.websheets.co",
-	//HERO
-	heroTitle: "Build websites with just Google Sheets",
-	heroDescription: "This is an open-sourced project that let's you build websites simply by filling in a Google Sheets template. No accounts, no dashboards, no fees!",
+	logoUrl: "/images/logo.png",
+	navButtonText: "",
+	navButtonUrl: "",
+	// HERO
+	heroTitle: 'Watch local Islamic content from the comfort of your home',
+	heroDescription:
+		"Our local asatizah have been hard at work in producing online content to ensure that we can continue to seek religious knowledge in this uncertain time. We curate them here to support their efforts.",
+		primaryButtonText: "Treat The Dev",
+		primaryButtonUrl: "https://buymeacoffee.com/sohafidz",
+	secondaryButtonText: "Documentation",
+	secondaryButtonUrl: "https://docs.websheets.co",
 	//FOOTER
-	copyrightText: "© WebSheets 2021",
 	footerText: "This project was developed by",
 	footerLinkableText: "Tengku Hafidz",
 	footerLinkableUrl: "https://tengkuhafidz.com",
 	//SEO
 	seoTitle: "Websheets",
 	seoDescription: "Build websites with just Google Sheets",
-	seoBannerUrl: "/images/banner.png"
+	seoBannerUrl: "/images/banner.png",
+	//ANNOUNCEMENT BAR
+	announcementMessage:
+	'Click here for Terawih prayers booking guide in Singapore 🇸🇬',
+	announcementDestinationUrl:
+	'https://www.facebook.com/MUIS.SG/posts/10158740795711329',
 }
 
 export enum SheetsDimension {

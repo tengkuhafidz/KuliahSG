@@ -1,6 +1,10 @@
 import axios from 'axios'
 import {SheetsDimension, SHEET_ID, SHEET_KEY} from '../utils/constants'
-import {transformItemsData, transformSiteData} from './transformers'
+import {
+	transformPlaylistItemsData,
+	transformPageData,
+	transformQuoteItemsData,
+} from './transformers'
 
 const fetchSheetsData = async (
 	tabName: string,
@@ -12,17 +16,40 @@ const fetchSheetsData = async (
 	)
 }
 
-export const getItems = async () => {
-	const {data} = await fetchSheetsData('items', 'A2:E', SheetsDimension.ROWS)
-	const allItems = transformItemsData(data.values)
+export const getPlaylistItems = async () => {
+	const {data} = await fetchSheetsData(
+		'playlist-items',
+		'A2:E',
+		SheetsDimension.ROWS,
+	)
+	const allItems = transformPlaylistItemsData(data.values)
 	return allItems.filter(item => item.isActive)
 }
 
-export const getSiteData = async () => {
+export const getPlaylistPageData = async () => {
 	const {data} = await fetchSheetsData(
-		'site',
-		'B1:B21',
+		'playlist-page',
+		'B1:B22',
 		SheetsDimension.COLUMNS,
 	)
-	return transformSiteData(data.values[0])
+	return transformPageData(data.values[0])
+}
+
+export const getQuoteItems = async () => {
+	const {data} = await fetchSheetsData(
+		'quotes-items',
+		'A2:I',
+		SheetsDimension.ROWS,
+	)
+	const allItems = transformQuoteItemsData(data.values)
+	return allItems.filter(item => item.isActive)
+}
+
+export const getQuotesPageData = async () => {
+	const {data} = await fetchSheetsData(
+		'quotes-page',
+		'B1:B22',
+		SheetsDimension.COLUMNS,
+	)
+	return transformPageData(data.values[0])
 }

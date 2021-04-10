@@ -1,8 +1,8 @@
 import {GetStaticProps} from 'next'
 import React from 'react'
-import ItemsList from '../components/Playlist/items-list'
+import ItemsList from '../components/Quotes/items-list'
 import Layout from '../components/Layout'
-import {getPlaylistItems, getPlaylistPageData} from '../services/sheet'
+import {getQuoteItems, getQuotesPageData} from '../services/sheet'
 import {PageDataProvider} from '../utils/PageDataContext'
 
 export default function Index({pageData, items}) {
@@ -16,8 +16,8 @@ export default function Index({pageData, items}) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-	const items = await getPlaylistItems()
-	const pageData = await getPlaylistPageData()
+	const items = await getQuoteItems()
+	const pageData = await getQuotesPageData()
 
 	return {
 		props: {
