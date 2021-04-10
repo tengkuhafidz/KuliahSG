@@ -48,30 +48,30 @@ export interface PageData {
 
 export const defaultPageData: PageData = {
 	// NAVBAR
-	logoUrl: "/images/logo.png",
-	navButtonText: "",
-	navButtonUrl: "",
+	logoUrl: '/images/logo.png',
+	navButtonText: '',
+	navButtonUrl: '',
 	// HERO
 	heroTitle: 'Watch local Islamic content from the comfort of your home',
 	heroDescription:
-		"Our local asatizah have been hard at work in producing online content to ensure that we can continue to seek religious knowledge in this uncertain time. We curate them here to support their efforts.",
-		primaryButtonText: "Treat The Dev",
-		primaryButtonUrl: "https://buymeacoffee.com/sohafidz",
-	secondaryButtonText: "Documentation",
-	secondaryButtonUrl: "https://docs.websheets.co",
+		'Our local asatizah have been hard at work in producing online content to ensure that we can continue to seek religious knowledge in this uncertain time. We curate them here to support their efforts.',
+	primaryButtonText: 'Treat The Dev',
+	primaryButtonUrl: 'https://buymeacoffee.com/sohafidz',
+	secondaryButtonText: 'Documentation',
+	secondaryButtonUrl: 'https://docs.websheets.co',
 	//FOOTER
-	footerText: "This project was developed by",
-	footerLinkableText: "Tengku Hafidz",
-	footerLinkableUrl: "https://tengkuhafidz.com",
+	footerText: 'This project was developed by',
+	footerLinkableText: 'Tengku Hafidz',
+	footerLinkableUrl: 'https://tengkuhafidz.com',
 	//SEO
-	seoTitle: "Websheets",
-	seoDescription: "Build websites with just Google Sheets",
-	seoBannerUrl: "/images/banner.png",
+	seoTitle: 'Websheets',
+	seoDescription: 'Build websites with just Google Sheets',
+	seoBannerUrl: '/images/banner.png',
 	//ANNOUNCEMENT BAR
 	announcementMessage:
-	'Click here for Terawih prayers booking guide in Singapore 🇸🇬',
+		'Click here for Terawih prayers booking guide in Singapore 🇸🇬',
 	announcementDestinationUrl:
-	'https://www.facebook.com/MUIS.SG/posts/10158740795711329',
+		'https://www.facebook.com/MUIS.SG/posts/10158740795711329',
 }
 
 export enum SheetsDimension {
@@ -81,3 +81,4 @@ export enum SheetsDimension {
 
 export const SHEET_ID = process.env.SHEET_ID
 export const SHEET_KEY = process.env.SHEET_KEY
+export const HOCKEYSTACK_KEY = process.env.HOCKEYSTACK_KEY

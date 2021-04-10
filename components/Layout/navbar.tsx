@@ -2,9 +2,11 @@ import {useContext} from 'react'
 import PageDataContext from '../../utils/PageDataContext'
 
 export default function Navbar() {
-	const {navButtonText, navButtonUrl, logoUrl} = useContext(PageDataContext)
-	console.log('navButtonText', navButtonText)
-	console.log('navButtonUrl', navButtonUrl)
+	const {
+		navButtonText,
+		navButtonUrl,
+		logoUrl,
+	} = useContext(PageDataContext)
 
 	const renderNavButton = () => {
 		if (!navButtonText || !navButtonUrl) {
@@ -35,7 +37,9 @@ export default function Navbar() {
 					/>
 				</div>
 			</div>
-			<div>{renderNavButton()}</div>
+			<div>
+				{renderNavButton()}
+			</div>
 		</div>
 	)
 }
