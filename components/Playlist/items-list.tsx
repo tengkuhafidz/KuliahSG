@@ -1,14 +1,32 @@
+import React from 'react'
 import {PlaylistItem} from '../../utils/constants'
-import SingleItem from './single-item'
+import Card from './item-types/card'
 
 interface Props {
 	items: PlaylistItem[]
+	favouriteIds: number[]
+	toggleFavourite: (id: number) => void
 }
 
-export default function ItemsList({items}: Props) {
+export default function ItemsList({
+	items,
+	favouriteIds,
+	toggleFavourite,
+}: Props) {
 	const renderItems = () => {
-		return items.map(item => <SingleItem item={item} key={item.id} />)
+		return items.map(item => (
+			<Card
+				item={item}
+				key={item.id}
+				favouriteIds={favouriteIds}
+				toggleFavourite={toggleFavourite}
+			/>
+		))
 	}
 
-	return <div>{renderItems()}</div>
+	return (
+		<div className="py-16 mb-8 grid gap-6 xl:gap-12 md:grid-cols-3">
+			{renderItems()}
+		</div>
+	)
 }

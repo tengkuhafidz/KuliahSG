@@ -11,14 +11,14 @@ export default function Hero() {
 		secondaryButtonText,
 		secondaryButtonUrl,
 	} = useContext(PageDataContext)
-	console.log('primaryButtonUrl', primaryButtonUrl)
+
 	let firstButtonStyle =
 		'py-2 px-8 bg-green-500 text-white rounded-lg border border-green-500 hover:bg-green-700 hover:border-green-700 mr-4'
 	let secondButtonStyle =
-		'py-2 px-8 text-green-500 rounded-lg border border-green-500 hover:bg-green-700 hover:border-green-700 mr-4'
+		'py-2 px-8 text-green-500 rounded-lg border border-green-500 hover:bg-green-700 hover:border-green-700 hover:text-white mr-4'
 	if (primaryButtonUrl === '/') {
 		firstButtonStyle =
-			'py-2 px-8 text-green-500 rounded-lg border border-green-500 hover:bg-green-700 hover:border-green-700 mr-4'
+			'py-2 px-8 text-green-500 rounded-lg border border-green-500 hover:bg-green-700 hover:border-green-700 hover:text-white mr-4'
 		secondButtonStyle =
 			'py-2 px-8 bg-green-500 text-white rounded-lg border border-green-500 hover:bg-green-700 hover:border-green-700 mr-4'
 	}

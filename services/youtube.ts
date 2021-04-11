@@ -31,7 +31,7 @@ const addYoutubePlaylistDetailsToSingleItem = async (
 		return {
 			...item,
 			playlistId,
-			playlistThumbnailUrl: thumbnails.default.url,
+			playlistThumbnailUrl: thumbnails.medium.url,
 			originChannelName: videoOwnerChannelTitle,
 			originChannelUrl: constructChannelUrlById(videoOwnerChannelId),
 			lastPublishedAt: publishedAt,

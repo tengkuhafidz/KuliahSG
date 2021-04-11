@@ -4,12 +4,13 @@ import ItemsList from '../components/Quotes/items-list'
 import Layout from '../components/Layout'
 import {getQuoteItems, getQuotesPageData} from '../services/sheet'
 import {PageDataProvider} from '../utils/PageDataContext'
+import Quotes from '../components/Quotes'
 
 export default function Index({pageData, items}) {
 	return (
 		<PageDataProvider value={pageData}>
 			<Layout>
-				<ItemsList items={items} />
+				<Quotes items={items} />
 			</Layout>
 		</PageDataProvider>
 	)

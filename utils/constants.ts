@@ -1,3 +1,9 @@
+export enum MainFilterOptions {
+	ENGLISH = 'English',
+	MALAY = 'Malay',
+	FAVOURITE = 'My Favourites'
+}
+
 export interface PlaylistItem {
 	id: number
 	title: string
@@ -20,6 +26,7 @@ export interface QuoteItem {
 	contributorName: string
 	contributorUrl: string
 	language: string
+	timestamp: string
 	tags: string[]
 	isActive: boolean
 }
@@ -81,6 +88,8 @@ export enum SheetsDimension {
 	ROWS = 'ROWS',
 	COLUMNS = 'COLUMNS',
 }
+
+export const FILTER_ALL = 'All'
 
 export const SHEET_ID = process.env.SHEET_ID
 export const SHEET_KEY = process.env.SHEET_KEY
