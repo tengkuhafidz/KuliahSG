@@ -2,9 +2,7 @@ import {useContext} from 'react'
 import PageDataContext from '../../utils/PageDataContext'
 
 export default function AnnouncementBar() {
-	const {announcementMessage, announcementDestinationUrl} = useContext(
-		PageDataContext,
-	)
+	const {announcementMessage, announcementDestinationUrl} = useContext(PageDataContext)
 
 	if (!announcementMessage) {
 		return null
