@@ -41,10 +41,11 @@ export default function Playlist({items}: Props) {
 		setFavouriteIds(updatedItemsList)
 	}
 
-	const searchResults: PlaylistItem[] = searchTerm
+	const searchResults = searchTerm
 		? getFuseSearchResult(items, searchTerm, ['title', 'originChannelName'])
 		: items
-	
+
+
 	const filteredItems = filterPlaylistItems(
 		searchResults,
 		selectedMainFilter,

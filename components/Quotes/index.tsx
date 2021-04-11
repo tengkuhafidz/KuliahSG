@@ -26,10 +26,6 @@ export default function Quotes({items}: Props) {
 		}
 	}, [])
 
-	console.log('>>> searchTerm', searchTerm)
-	console.log('>>> selectedMainFilter', selectedMainFilter)
-	console.log('>>> selectedTagFilter', selectedTagFilter)
-
 	const removeIdFromFavs = (id: number) =>
 		favouriteQuoteIds.filter(favId => favId !== id)
 	const addIdToFavs = (id: number) => [id, ...favouriteQuoteIds]
