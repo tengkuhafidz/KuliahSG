@@ -24,12 +24,12 @@ export default function Card({item, favouriteIds, toggleFavourite}: Props) {
 			<div className="shadow-lg rounded-xl hover:shadow-xl max-w-xl mx-auto bg-white flex flex-col py-8 px-8">
 				<div className="flex">
 					<div className="flex-grow">
-						<p className="text-xs text-gray-500 font-light">
+						<p className="text-xs text-gray-500 font-light mt-1">
 							Contributed by{' '}
 							<a
 								href={contributorUrl}
 								target="_blank"
-								className="hover:underline"
+								className="hover:underline hover:text-green-600"
 							>
 								{contributorName}
 							</a>
@@ -52,13 +52,18 @@ export default function Card({item, favouriteIds, toggleFavourite}: Props) {
 						</svg>
 					</div>
 				</div>
-				<p className="font-semibold text-lg py-6">"{message}"</p>
+				<p className="font-semibold text-lg md:text-xl pt-6 pb-4">
+					"{message}"
+				</p>
 				<p className="text-sm text-gray-500 font-light">
 					-{' '}
-					<a href={sourceUrl} target="_blank" className="hover:underline">
-						{sourceTitle}
+					<a
+						href={sourceUrl}
+						target="_blank"
+						className="hover:underline hover:text-green-600"
+					>
+						{sourceTitle} ({timestamp})
 					</a>
-					({timestamp})
 				</p>
 			</div>
 		</div>

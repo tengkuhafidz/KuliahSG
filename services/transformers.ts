@@ -39,7 +39,7 @@ export const transformQuoteItemsData = (itemValues: any[]): QuoteItem[] => {
 		language: itemValue[6],
 		tags: stringToArray(itemValue[7]),
 		isActive: stringToBoolean(itemValue[8]),
-	}))
+	})).reverse()
 }
 
 export const transformPageData = (pageDataValue: any[]): PageData => ({
