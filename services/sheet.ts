@@ -1,8 +1,8 @@
 import axios from 'axios'
 import {SheetsDimension, SHEET_ID, SHEET_KEY} from '../utils/constants'
 import {
-	transformPlaylistItemsData,
 	transformPageData,
+	transformPlaylistItemsData,
 	transformQuoteItemsData,
 } from './transformers'
 

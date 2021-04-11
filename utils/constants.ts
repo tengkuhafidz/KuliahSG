@@ -6,7 +6,10 @@ export interface PlaylistItem {
 	tags: string[]
 	isActive: boolean
 	playlistId: string
-	playlistThumbnail: string
+	playlistThumbnailUrl: string
+	originChannelName: string
+	originChannelUrl: string
+	lastPublishedAt: string
 }
 
 export interface QuoteItem {

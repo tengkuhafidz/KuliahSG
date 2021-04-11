@@ -20,7 +20,10 @@ export const transformPlaylistItemsData = (
 		tags: stringToArray(itemValue[3]),
 		isActive: stringToBoolean(itemValue[4]),
 		playlistId: '',
-		playlistThumbnail: '',
+		playlistThumbnailUrl: '',
+		originChannelName: '',
+		originChannelUrl: '',
+		lastPublishedAt: '',
 	}))
 }
 
