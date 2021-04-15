@@ -23,7 +23,7 @@ export const getPlaylistItems = async () => {
 		SheetsDimension.ROWS,
 	)
 	const allItems = transformPlaylistItemsData(data.values)
-	return allItems.filter(item => item.isActive)
+	return allItems.filter(item => item.isActive).reverse()
 }
 
 export const getPlaylistPageData = async () => {
@@ -42,7 +42,7 @@ export const getQuoteItems = async () => {
 		SheetsDimension.ROWS,
 	)
 	const allItems = transformQuoteItemsData(data.values)
-	return allItems.filter(item => item.isActive)
+	return allItems.filter(item => item.isActive).reverse()
 }
 
 export const getQuotesPageData = async () => {

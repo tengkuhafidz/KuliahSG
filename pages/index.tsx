@@ -6,7 +6,7 @@ import { getPlaylistItems, getPlaylistPageData } from '../services/sheet'
 import { addYoutubePlaylistItemDetails } from '../services/youtube'
 import { PageDataProvider } from '../utils/PageDataContext'
 
-export default function Index({pageData, items}) {
+export default function PlaylistsPage({pageData, items}) {
 	return (
 		<PageDataProvider value={pageData}>
 			<Layout>

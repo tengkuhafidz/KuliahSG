@@ -1,12 +1,11 @@
-import {GetStaticProps} from 'next'
+import { GetStaticProps } from 'next'
 import React from 'react'
-import ItemsList from '../components/Quotes/items-list'
-import Layout from '../components/Layout'
-import {getQuoteItems, getQuotesPageData} from '../services/sheet'
-import {PageDataProvider} from '../utils/PageDataContext'
-import Quotes from '../components/Quotes'
+import Layout from '../../components/Layout'
+import Quotes from '../../components/Quotes'
+import { getQuoteItems, getQuotesPageData } from '../../services/sheet'
+import { PageDataProvider } from '../../utils/PageDataContext'
 
-export default function Index({pageData, items}) {
+export default function QuotesPage({pageData, items}) {
 	return (
 		<PageDataProvider value={pageData}>
 			<Layout>

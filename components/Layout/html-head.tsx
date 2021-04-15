@@ -16,7 +16,7 @@ export default function HtmlHead() {
 			{/* Facebook Meta Tags */}
 			<meta
 				property="og:url"
-				content="https://ramadhaninitiatives.websheets.co/"
+				content="https://kuliah.sg/"
 			/>
 			<meta property="og:type" content="website" />
 			<meta property="og:title" content={fullSeoTitle} />
@@ -27,11 +27,11 @@ export default function HtmlHead() {
 			<meta name="twitter:card" content="summary_large_image" />
 			<meta
 				property="twitter:domain"
-				content="ramadhaninitiatives.websheets.co"
+				content="kuliah.sg"
 			/>
 			<meta
 				property="twitter:url"
-				content="https://ramadhaninitiatives.websheets.co/"
+				content="https://kuliah.sg/"
 			/>
 			<meta name="twitter:title" content={fullSeoTitle} />
 			<meta name="twitter:description" content={seoDescription} />
