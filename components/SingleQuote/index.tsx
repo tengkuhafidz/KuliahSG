@@ -12,7 +12,7 @@ interface Props {
 export default function SingleQuote({item, totalItems}: Props) {
 	return (
 		<div className="max-w-xl lg:max-w-2xl mx-auto">
-			<div className="mb-8">
+			<div>
 				<Link href="/quotes">
 					<a className="text-sm font-thin text-gray-400 hover:text-gray-100">
 						<svg

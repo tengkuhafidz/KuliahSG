@@ -17,12 +17,11 @@ export default function SingleQuoteLayout({children}) {
 				<div className="container mx-auto max-w-6xl pt-4 px-4">
 					<Navbar />
 				</div>
-				<div className="container mx-auto max-w-6xl flex-grow px-4 flex flex-col justify-center">
-					<main className="py-16">{children}</main>
+				<div className="container mx-auto max-w-6xl flex-grow px-4 md:flex md:flex-col md:justify-center">
+					<main className="py-8">{children}</main>
 				</div>
 				<Footer />
 			</div>
-			<BackToTop />
 		</div>
 	)
 }

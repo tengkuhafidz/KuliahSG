@@ -48,7 +48,7 @@ export default function SingleQuoteCard({item}: Props) {
 		favouriteQuoteIds.length > 0 ? favouriteQuoteIds.includes(id) : false
 
 	return (
-		<div>
+		<div className="py-4 md:py-8">
 			<div className="rounded-xl bg-white py-8 px-8 lg:px-12 shadow-lg hover:shadow-xl">
 				<div className="flex">
 					<div className="flex-grow">

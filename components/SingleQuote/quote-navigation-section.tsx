@@ -6,7 +6,10 @@ interface Props {
 	totalItems: number
 }
 
-export default function QuoteNavigationSection({currItemIndex, totalItems}: Props) {
+export default function QuoteNavigationSection({
+	currItemIndex,
+	totalItems,
+}: Props) {
 	const firstItemIndex = 0
 	const lastItemIndex = totalItems - 1
 
@@ -18,7 +21,7 @@ export default function QuoteNavigationSection({currItemIndex, totalItems}: Prop
 	const randomIndex = Math.floor(Math.random() * lastItemIndex)
 
 	return (
-		<div className="mt-8 flex">
+		<div className="flex">
 			<Link href={`/quotes/${previousIndex}`}>
 				<a className="border-2 bg-border-white text-white p-3 rounded-xl hover:bg-white hover:text-gray-800">
 					<svg
